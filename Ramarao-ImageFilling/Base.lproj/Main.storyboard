@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ramarao_ImageFilling" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clown.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eD8-kr-HGH" customClass="FloodFillImageView">
+                                <rect key="frame" x="82.666666666666686" y="215" width="249" height="238"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="238" id="63R-H2-iqb"/>
+                                    <constraint firstAttribute="width" constant="249" id="iWy-BN-0Y3"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="cfk-6v-s5S">
+                                <rect key="frame" x="51" y="686" width="312" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgj-4z-uAh">
+                                        <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        <state key="normal" title="Red">
+                                            <color key="titleColor" red="1" green="0.15702302893339837" blue="0.16989640392718131" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="BtnTapForColorChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SzS-64-wea"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="az8-Of-g2z">
+                                        <rect key="frame" x="79" y="0.0" width="42" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Blue">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="BtnTapForColorChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WtE-l7-jFW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmG-PO-lYO">
+                                        <rect key="frame" x="161" y="0.0" width="53" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Black">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="BtnTapForColorChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9yP-mb-rbh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R68-JU-x1c">
+                                        <rect key="frame" x="254" y="0.0" width="58" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Green">
+                                            <color key="titleColor" red="0.4344005261856751" green="0.63665926395939088" blue="0.26791981312797325" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="BtnTapForColorChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VlZ-Ni-z6G"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="agn-Fw-Q4d"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cfk-6v-s5S" firstAttribute="top" secondItem="eD8-kr-HGH" secondAttribute="bottom" constant="233" id="7uz-Fm-QUx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cfk-6v-s5S" secondAttribute="bottom" constant="20" id="9gr-BI-Sj4"/>
+                            <constraint firstItem="cfk-6v-s5S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KX0-zh-871"/>
+                            <constraint firstItem="eD8-kr-HGH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uUw-Bm-kg8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="jokerImageView" destination="eD8-kr-HGH" id="wxG-Su-JGW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-340.57971014492756" y="6.5217391304347831"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Clown.jpg" width="900" height="600"/>
+    </resources>
+</document>
